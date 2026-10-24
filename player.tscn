@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://c5ckupu0pogp8"]
+[gd_scene load_steps=0 format=3 uid="uid://c5ckupu0pogp8"]
 
 [ext_resource type="Script" uid="uid://b0abmesq8c8ip" path="res://vrInitilize.gd" id="1_4flbx"]
 
