@@ -4,8 +4,12 @@
 
 [node name="XROrigin3D" type="XROrigin3D" parent="." unique_id=2023939950]
 
-[node name="XRController3D" type="XRController3D" parent="XROrigin3D" unique_id=649067091]
+[node name="Lhand" type="XRController3D" parent="XROrigin3D" unique_id=649067091]
+tracker = &"left_hand"
+show_when_tracked = true
 
-[node name="XRController3D2" type="XRController3D" parent="XROrigin3D" unique_id=970931576]
+[node name="Rhand" type="XRController3D" parent="XROrigin3D" unique_id=970931576]
+tracker = &"right_hand"
+show_when_tracked = true
 
 [node name="XRCamera3D" type="XRCamera3D" parent="XROrigin3D" unique_id=1802591828]
