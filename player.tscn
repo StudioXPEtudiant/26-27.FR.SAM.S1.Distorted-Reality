@@ -53,7 +53,7 @@ show_when_tracked = true
 mesh = SubResource("SphereMesh_eo2jr")
 
 [node name="Sprite3D" type="Sprite3D" parent="XROrigin3D/Lhand" unique_id=878381658]
-transform = Transform3D(0.135, 0, 0, 0, 0.135, 0, 0, 0, 0.135, 0, 0.24426639, 0)
+transform = Transform3D(0.22, 0, 0, 0, 0.22, 0, 0, 0, 0.22, 0, 0.19720435, 0)
 texture = SubResource("ViewportTexture_eo2jr")
 
 [node name="XRCamera3D" type="XRCamera3D" parent="XROrigin3D" unique_id=1802591828]
@@ -65,6 +65,6 @@ mesh = SubResource("CapsuleMesh_eo2jr")
 
 [node name="SubViewport" type="SubViewport" parent="." unique_id=1055351388]
 transparent_bg = true
-size = Vector2i(1152, 648)
+size = Vector2i(380, 75)
 
 [node name="Inventaire" parent="SubViewport" unique_id=49829407 instance=ExtResource("2_onrkg")]
