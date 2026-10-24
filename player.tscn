@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://c5ckupu0pogp8"]
 
 [ext_resource type="Script" uid="uid://b0abmesq8c8ip" path="res://vrInitilize.gd" id="1_4flbx"]
+[ext_resource type="PackedScene" uid="uid://pul51jhcy81x" path="res://inventaire.tscn" id="2_onrkg"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_4flbx"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -18,6 +19,9 @@ glow_enabled = true
 radius = 0.1
 height = 0.2
 
+[sub_resource type="ViewportTexture" id="ViewportTexture_eo2jr"]
+viewport_path = NodePath("SubViewport")
+
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_eo2jr"]
 
 [node name="Player" type="Node3D" unique_id=383366206]
@@ -32,21 +36,25 @@ shadow_enabled = true
 
 [node name="XROrigin3D" type="XROrigin3D" parent="." unique_id=2023939950]
 
-[node name="Lhand" type="XRController3D" parent="XROrigin3D" unique_id=649067091]
+[node name="Rhand" type="XRController3D" parent="XROrigin3D" unique_id=649067091]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 1.2, -0.7)
-tracker = &"left_hand"
-show_when_tracked = true
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="XROrigin3D/Lhand" unique_id=1886868316]
-mesh = SubResource("SphereMesh_eo2jr")
-
-[node name="Rhand" type="XRController3D" parent="XROrigin3D" unique_id=970931576]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 1.2, -0.7)
 tracker = &"right_hand"
 show_when_tracked = true
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="XROrigin3D/Rhand" unique_id=853220416]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="XROrigin3D/Rhand" unique_id=1886868316]
 mesh = SubResource("SphereMesh_eo2jr")
+
+[node name="Lhand" type="XRController3D" parent="XROrigin3D" unique_id=970931576]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 1.2, -0.7)
+tracker = &"left_hand"
+show_when_tracked = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="XROrigin3D/Lhand" unique_id=853220416]
+mesh = SubResource("SphereMesh_eo2jr")
+
+[node name="Sprite3D" type="Sprite3D" parent="XROrigin3D/Lhand" unique_id=878381658]
+transform = Transform3D(0.135, 0, 0, 0, 0.135, 0, 0, 0, 0.135, 0, 0.24426639, 0)
+texture = SubResource("ViewportTexture_eo2jr")
 
 [node name="XRCamera3D" type="XRCamera3D" parent="XROrigin3D" unique_id=1802591828]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6148762, 0)
@@ -54,3 +62,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6148762, 0)
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=2010830885]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 mesh = SubResource("CapsuleMesh_eo2jr")
+
+[node name="SubViewport" type="SubViewport" parent="." unique_id=1055351388]
+transparent_bg = true
+size = Vector2i(1152, 648)
+
+[node name="Inventaire" parent="SubViewport" unique_id=49829407 instance=ExtResource("2_onrkg")]
