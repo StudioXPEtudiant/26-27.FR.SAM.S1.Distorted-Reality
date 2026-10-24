@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://pul51jhcy81x"]
+
+[node name="Inventaire" type="Control" unique_id=49829407]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="." unique_id=1810819169]
+layout_mode = 0
+offset_left = 366.0
+offset_top = 350.0
+offset_right = 435.0
+offset_bottom = 419.0
+
+[node name="Panel2" type="Panel" parent="." unique_id=280339743]
+layout_mode = 0
+offset_left = 442.0
+offset_top = 350.0
+offset_right = 511.0
+offset_bottom = 419.0
+
+[node name="Panel3" type="Panel" parent="." unique_id=1053026918]
+layout_mode = 0
+offset_left = 519.0
+offset_top = 350.0
+offset_right = 588.0
+offset_bottom = 419.0
+
+[node name="Panel4" type="Panel" parent="." unique_id=1881544306]
+layout_mode = 0
+offset_left = 595.0
+offset_top = 350.0
+offset_right = 664.0
+offset_bottom = 419.0
+
+[node name="Panel5" type="Panel" parent="." unique_id=1444324756]
+layout_mode = 0
+offset_left = 671.0
+offset_top = 350.0
+offset_right = 740.0
+offset_bottom = 419.0
