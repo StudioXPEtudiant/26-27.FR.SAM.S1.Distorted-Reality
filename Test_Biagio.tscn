@@ -14,7 +14,7 @@ mesh = SubResource("BoxMesh_lt752")
 skeleton = NodePath("../sol")
 
 [node name="mur2" type="MeshInstance3D" parent="."]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 15, 4.5, 0)
+transform = Transform3D(-1, 0, -6.01617e-08, 0, 1, 0, 8.74228e-08, 0, -0.68817, 14.9, 4.50004, -3.29085)
 mesh = SubResource("BoxMesh_lt752")
 skeleton = NodePath("../sol")
 
@@ -25,10 +25,14 @@ skeleton = NodePath("../sol")
 metadata/_edit_group_ = true
 
 [node name="mur4" type="MeshInstance3D" parent="."]
-transform = Transform3D(-4.37114e-08, 0, 0.680289, 0, 1, 0, -1, 0, -2.97364e-08, -8.11203, 4.5, -9.49281)
+transform = Transform3D(-4.37114e-08, 0, 0.935314, 0, 1, 0, -1, 0, -4.08839e-08, -5.5213, 4.5, -9.49281)
 mesh = SubResource("BoxMesh_lt752")
 skeleton = NodePath("../sol")
 
 [node name="sol" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0364293, 0, 0)
+mesh = SubResource("PlaneMesh_4c8tf")
+
+[node name="sol" type="MeshInstance3D" parent="sol"]
+transform = Transform3D(0.628006, 0, 0, 0, 1, 0, 0, 0, 1, 23.9956, 0, 0)
 mesh = SubResource("PlaneMesh_4c8tf")
