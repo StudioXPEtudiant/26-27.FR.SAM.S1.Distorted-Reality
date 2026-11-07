@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://02blcm2j5ors"]
 
+[ext_resource type="Script" uid="uid://b0abmesq8c8ip" path="res://vrInitilize.gd" id="1_104vu"]
 [ext_resource type="PackedScene" uid="uid://c5ckupu0pogp8" path="res://player.tscn" id="1_q1m20"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_eo2jr"]
@@ -9,6 +10,7 @@ size = Vector2(5, 5)
 data = PackedVector3Array(2.5, 0, 2.5, -2.5, 0, 2.5, 2.5, 0, -2.5, -2.5, 0, 2.5, -2.5, 0, -2.5, 2.5, 0, -2.5)
 
 [node name="MapTest" type="Node3D" unique_id=1990124940]
+script = ExtResource("1_104vu")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1495991998]
 
