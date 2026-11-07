@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://c5ckupu0pogp8"]
+[gd_scene format=3 uid="uid://c5ckupu0pogp8"]
 
 [ext_resource type="Script" uid="uid://b0abmesq8c8ip" path="res://vrInitilize.gd" id="1_4flbx"]
 [ext_resource type="PackedScene" uid="uid://pul51jhcy81x" path="res://inventaire.tscn" id="2_onrkg"]
@@ -15,6 +15,8 @@ background_mode = 2
 sky = SubResource("Sky_onrkg")
 glow_enabled = true
 
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_eo2jr"]
+
 [sub_resource type="SphereMesh" id="SphereMesh_eo2jr"]
 radius = 0.1
 height = 0.2
@@ -22,49 +24,46 @@ height = 0.2
 [sub_resource type="ViewportTexture" id="ViewportTexture_eo2jr"]
 viewport_path = NodePath("SubViewport")
 
-[sub_resource type="CapsuleMesh" id="CapsuleMesh_eo2jr"]
-
-[node name="Player" type="Node3D"]
+[node name="Player" type="XROrigin3D" unique_id=628861323]
 script = ExtResource("1_4flbx")
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=918569051]
 environment = SubResource("Environment_i3pqv")
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=736190250]
 transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75, -0.433013, 0, 0, 0)
 shadow_enabled = true
-
-[node name="XROrigin3D" type="XROrigin3D" parent="."]
-
-[node name="Rhand" type="XRController3D" parent="XROrigin3D" unique_id=649067091]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 1.2, -0.7)
-tracker = &"right_hand"
-show_when_tracked = true
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="XROrigin3D/Rhand" unique_id=1886868316]
-mesh = SubResource("SphereMesh_eo2jr")
-
-[node name="Lhand" type="XRController3D" parent="XROrigin3D" unique_id=970931576]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 1.2, -0.7)
-tracker = &"left_hand"
-show_when_tracked = true
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="XROrigin3D/Lhand" unique_id=853220416]
-mesh = SubResource("SphereMesh_eo2jr")
-
-[node name="Sprite3D" type="Sprite3D" parent="XROrigin3D/Lhand" unique_id=878381658]
-transform = Transform3D(0.22, 0, 0, 0, 0.22, 0, 0, 0, 0.22, 0, 0.19720435, 0)
-texture = SubResource("ViewportTexture_eo2jr")
-
-[node name="XRCamera3D" type="XRCamera3D" parent="XROrigin3D" unique_id=1802591828]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6148762, 0)
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
-mesh = SubResource("CapsuleMesh_eo2jr")
 
 [node name="SubViewport" type="SubViewport" parent="." unique_id=1055351388]
 transparent_bg = true
 size = Vector2i(380, 75)
 
 [node name="Inventaire" parent="SubViewport" unique_id=49829407 instance=ExtResource("2_onrkg")]
+
+[node name="XRCamera3D" type="XRCamera3D" parent="." unique_id=1802591828]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6148762, 0)
+current = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1714249211]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+mesh = SubResource("CapsuleMesh_eo2jr")
+
+[node name="Rhand" type="XRController3D" parent="." unique_id=649067091]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 1.2, -0.7)
+tracker = &"right_hand"
+show_when_tracked = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Rhand" unique_id=1886868316]
+mesh = SubResource("SphereMesh_eo2jr")
+
+[node name="Lhand" type="XRController3D" parent="." unique_id=970931576]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 1.2, -0.7)
+tracker = &"left_hand"
+show_when_tracked = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Lhand" unique_id=853220416]
+mesh = SubResource("SphereMesh_eo2jr")
+
+[node name="Sprite3D" type="Sprite3D" parent="Lhand" unique_id=878381658]
+transform = Transform3D(0.22, 0, 0, 0, 0.22, 0, 0, 0, 0.22, 0, 0.19720435, 0)
+texture = SubResource("ViewportTexture_eo2jr")
