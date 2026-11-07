@@ -1,7 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://in54j5eqfc61"]
+[gd_scene load_steps=5 format=3 uid="uid://in54j5eqfc61"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_lt752"]
 size = Vector3(1, 10, 20)
+
+[sub_resource type="BoxMesh" id="BoxMesh_4c8tf"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_a4812"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_4c8tf"]
 size = Vector2(30, 20)
@@ -13,21 +17,141 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.3496, 4.5, 0)
 mesh = SubResource("BoxMesh_lt752")
 skeleton = NodePath("../sol")
 
+[node name="mur5" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33.0155, 4.5, 0)
+mesh = SubResource("BoxMesh_lt752")
+skeleton = NodePath("../sol")
+
 [node name="mur2" type="MeshInstance3D" parent="."]
 transform = Transform3D(-1, 0, -6.01617e-08, 0, 1, 0, 8.74228e-08, 0, -0.68817, 14.9, 4.50004, -3.29085)
 mesh = SubResource("BoxMesh_lt752")
 skeleton = NodePath("../sol")
 
+[node name="mur7" type="MeshInstance3D" parent="."]
+transform = Transform3D(-1, 0, -3.07401e-08, 0, 0.33713, 0, 8.74228e-08, 0, -0.351626, 14.9, 7.78922, 6.59979)
+mesh = SubResource("BoxMesh_lt752")
+skeleton = NodePath("../sol")
+
+[node name="mur8" type="MeshInstance3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, 0.608876, 0, 0.171054, 0, -1, 0, -2.66148e-08, 9.39328, 8.66287, -9.67023)
+mesh = SubResource("BoxMesh_lt752")
+skeleton = NodePath("../sol")
+
 [node name="mur3" type="MeshInstance3D" parent="."]
-transform = Transform3D(-4.37114e-08, 0, 1.50597, 0, 1, 0, -1, 0, -6.58281e-08, 0.267415, 4.5, 9.671)
+transform = Transform3D(-4.37114e-08, 0.000907571, 2.41552, 3.96712e-11, 1, -0.00219225, -1, 0, -1.05586e-07, 9.46028, 4.5, 9.671)
 mesh = SubResource("BoxMesh_lt752")
 skeleton = NodePath("../sol")
 metadata/_edit_group_ = true
 
 [node name="mur4" type="MeshInstance3D" parent="."]
-transform = Transform3D(-4.37114e-08, 0, 0.935314, 0, 1, 0, -1, 0, -4.08839e-08, -5.5213, 4.5, -9.49281)
+transform = Transform3D(-4.37114e-08, 0, 0.935314, 0, 1, 0, -1, 0, -4.08839e-08, -5.5213, 4.5, -9.64437)
 mesh = SubResource("BoxMesh_lt752")
 skeleton = NodePath("../sol")
+
+[node name="mur6" type="MeshInstance3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, 0.935314, 0, 1, 0, -1, 0, -4.08839e-08, 24.1655, 4.5, -9.69295)
+mesh = SubResource("BoxMesh_lt752")
+skeleton = NodePath("../sol")
+
+[node name="escalier" type="MeshInstance3D" parent="."]
+transform = Transform3D(-4.02166e-08, 0, 0.454663, 0, 0.920049, 0, -0.920049, 0, -1.98739e-08, -9.51215, 3.18382, 8.74697)
+mesh = SubResource("BoxMesh_lt752")
+skeleton = NodePath("../sol")
+
+[node name="escalier2" type="MeshInstance3D" parent="."]
+transform = Transform3D(-4.02166e-08, 0, 0.454663, 0, 0.920049, 0, -0.920049, 0, -1.98739e-08, -9.51215, 2.39466, 7.87432)
+mesh = SubResource("BoxMesh_lt752")
+skeleton = NodePath("../sol")
+
+[node name="escalier3" type="MeshInstance3D" parent="."]
+transform = Transform3D(-4.02166e-08, 0, 0.454663, 0, 0.920049, 0, -0.920049, 0, -1.98739e-08, -9.51215, 1.5913, 6.9837)
+mesh = SubResource("BoxMesh_lt752")
+skeleton = NodePath("../sol")
+
+[node name="escalier4" type="MeshInstance3D" parent="."]
+transform = Transform3D(-4.02166e-08, 0, 0.454663, 0, 0.920049, 0, -0.920049, 0, -1.98739e-08, -9.51215, 0.848461, 6.14627)
+mesh = SubResource("BoxMesh_lt752")
+skeleton = NodePath("../sol")
+
+[node name="escalier5" type="MeshInstance3D" parent="."]
+transform = Transform3D(-4.02166e-08, 0, 0.454663, 0, 0.920049, 0, -0.920049, 0, -1.98739e-08, -9.51215, 0.0822105, 5.20646)
+mesh = SubResource("BoxMesh_lt752")
+skeleton = NodePath("../sol")
+
+[node name="escalier6" type="MeshInstance3D" parent="."]
+transform = Transform3D(-4.02166e-08, 0, 0.454663, 0, 0.920049, 0, -0.920049, 0, -1.98739e-08, -9.51215, -0.734022, 4.31857)
+mesh = SubResource("BoxMesh_lt752")
+skeleton = NodePath("../sol")
+
+[node name="escalier7" type="MeshInstance3D" parent="."]
+transform = Transform3D(-4.02166e-08, 0, 0.454663, 0, 0.920049, 0, -0.920049, 0, -1.98739e-08, -9.51215, -1.59254, 3.35685)
+mesh = SubResource("BoxMesh_lt752")
+skeleton = NodePath("../sol")
+
+[node name="escalier8" type="MeshInstance3D" parent="."]
+transform = Transform3D(-4.02166e-08, 0, 0.454663, 0, 0.920049, 0, -0.920049, 0, -1.98739e-08, -9.51215, -2.45602, 2.46993)
+mesh = SubResource("BoxMesh_lt752")
+skeleton = NodePath("../sol")
+
+[node name="escalier9" type="MeshInstance3D" parent="."]
+transform = Transform3D(-4.02166e-08, 0, 0.454663, 0, 0.920049, 0, -0.920049, 0, -1.98739e-08, -9.51215, -3.504, 1.55896)
+mesh = SubResource("BoxMesh_lt752")
+skeleton = NodePath("../sol")
+
+[node name="camera" type="MeshInstance3D" parent="."]
+transform = Transform3D(1.84787, 0.4199, 1.04708, -0.947043, 1.64146, 0.160618, -1.40485, -0.554231, 1.269, -3.90023, 6.35932, 8.46314)
+mesh = SubResource("BoxMesh_4c8tf")
+skeleton = NodePath("../sol")
+
+[node name="camera2" type="MeshInstance3D" parent="."]
+transform = Transform3D(-1.63059, -0.337291, -1.21604, -0.947043, 1.64146, 0.160618, 1.65209, 0.608049, -1.10815, 31.652, 7.51944, -8.16624)
+mesh = SubResource("BoxMesh_4c8tf")
+skeleton = NodePath("../sol")
+
+[node name="caisse" type="MeshInstance3D" parent="."]
+transform = Transform3D(-1.07625e-07, 0, 9.06564, 0, 3.42002, 0, -2.46217, 0, -3.96272e-07, 3.31516, 0.92143, 3.62578)
+mesh = SubResource("BoxMesh_a4812")
+skeleton = NodePath("../sol")
+
+[node name="table_haut" type="MeshInstance3D" parent="."]
+transform = Transform3D(-8.30051e-08, 0, 2.22336, 0, 0.281969, 0, -1.89894, 0, -9.71863e-08, -9.638, 1.18023, -6.58863)
+mesh = SubResource("BoxMesh_a4812")
+skeleton = NodePath("../sol")
+
+[node name="table_bas" type="MeshInstance3D" parent="table_haut"]
+transform = Transform3D(0.240724, 0, 8.88178e-16, 0, 9.37794, 0, 0, 0, 0.274844, 0.00440001, -4.22276, -0.0117245)
+mesh = SubResource("BoxMesh_a4812")
+skeleton = NodePath("../../sol")
+
+[node name="table_haut2" type="MeshInstance3D" parent="."]
+transform = Transform3D(-8.30051e-08, 0, 2.22336, 0, 0.281969, 0, -1.89894, 0, -9.71863e-08, -4.564, 1.18023, -3.74831)
+mesh = SubResource("BoxMesh_a4812")
+skeleton = NodePath("../sol")
+
+[node name="table_bas" type="MeshInstance3D" parent="table_haut2"]
+transform = Transform3D(0.240724, 0, 8.88178e-16, 0, 9.37794, 0, 0, 0, 0.274844, 0.00440001, -4.22276, -0.0117245)
+mesh = SubResource("BoxMesh_a4812")
+skeleton = NodePath("../../sol")
+
+[node name="table_haut3" type="MeshInstance3D" parent="."]
+transform = Transform3D(-8.30051e-08, 0, 2.22336, 0, 0.281969, 0, -1.89894, 0, -9.71863e-08, 9.27205, 1.18023, -4.38528)
+mesh = SubResource("BoxMesh_a4812")
+skeleton = NodePath("../sol")
+
+[node name="table_bas" type="MeshInstance3D" parent="table_haut3"]
+transform = Transform3D(0.240724, 0, 8.88178e-16, 0, 9.37794, 0, 0, 0, 0.274844, 0.00440001, -4.22276, -0.0117245)
+mesh = SubResource("BoxMesh_a4812")
+skeleton = NodePath("../../sol")
+
+[node name="table_haut4" type="MeshInstance3D" parent="."]
+transform = Transform3D(-8.30051e-08, 0, 2.22336, 0, 0.281969, 0, -1.89894, 0, -9.71863e-08, 12.5464, 1.18023, 0.0995073)
+mesh = SubResource("BoxMesh_a4812")
+skeleton = NodePath("../sol")
+
+[node name="table_bas" type="MeshInstance3D" parent="table_haut4"]
+transform = Transform3D(0.240724, 0, 8.88178e-16, 0, 9.37794, 0, 0, 0, 0.274844, 0.00440001, -4.22276, -0.0117245)
+mesh = SubResource("BoxMesh_a4812")
+skeleton = NodePath("../../sol")
 
 [node name="sol" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0364293, 0, 0)
