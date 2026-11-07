@@ -1,6 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://c5ckupu0pogp8"]
 
 [ext_resource type="PackedScene" uid="uid://pul51jhcy81x" path="res://inventaire.tscn" id="2_onrkg"]
+[ext_resource type="Script" uid="uid://e2o00hdn6177" path="res://mesh_alignment.gd" id="3_hqtel"]
 [ext_resource type="Script" uid="uid://bjuxbybh5uwmv" path="res://player_controller.gd" id="3_i3pqv"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_4flbx"]
@@ -72,6 +73,7 @@ current = true
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 mesh = SubResource("CapsuleMesh_eo2jr")
+script = ExtResource("3_hqtel")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1317933437]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.99999994, 0)
