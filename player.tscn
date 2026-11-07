@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://c5ckupu0pogp8"]
 
-[ext_resource type="Script" uid="uid://b0abmesq8c8ip" path="res://vrInitilize.gd" id="1_4flbx"]
 [ext_resource type="PackedScene" uid="uid://pul51jhcy81x" path="res://inventaire.tscn" id="2_onrkg"]
+[ext_resource type="Script" uid="uid://bjuxbybh5uwmv" path="res://player_controller.gd" id="3_i3pqv"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_4flbx"]
 sky_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
@@ -15,8 +15,6 @@ background_mode = 2
 sky = SubResource("Sky_onrkg")
 glow_enabled = true
 
-[sub_resource type="CapsuleMesh" id="CapsuleMesh_eo2jr"]
-
 [sub_resource type="SphereMesh" id="SphereMesh_eo2jr"]
 radius = 0.1
 height = 0.2
@@ -24,8 +22,13 @@ height = 0.2
 [sub_resource type="ViewportTexture" id="ViewportTexture_eo2jr"]
 viewport_path = NodePath("SubViewport")
 
-[node name="Player" type="XROrigin3D"]
-script = ExtResource("1_4flbx")
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_eo2jr"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_onrkg"]
+height = 1.9999999
+
+[node name="Player" type="CharacterBody3D" unique_id=1032940027]
+script = ExtResource("3_i3pqv")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_i3pqv")
@@ -40,30 +43,36 @@ size = Vector2i(380, 75)
 
 [node name="Inventaire" parent="SubViewport" instance=ExtResource("2_onrkg")]
 
-[node name="XRCamera3D" type="XRCamera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.61488, 0)
+[node name="XROrigin3D" type="XROrigin3D" parent="." unique_id=1995816677]
+
+[node name="Lhand" type="XRController3D" parent="XROrigin3D" unique_id=970931576]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 1.2, -0.7)
+tracker = &"left_hand"
+show_when_tracked = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="XROrigin3D/Lhand" unique_id=853220416]
+mesh = SubResource("SphereMesh_eo2jr")
+
+[node name="Sprite3D" type="Sprite3D" parent="XROrigin3D/Lhand" unique_id=878381658]
+transform = Transform3D(0.22, 0, 0, 0, 0.22, 0, 0, 0, 0.22, 0, 0.19720435, 0)
+texture = SubResource("ViewportTexture_eo2jr")
+
+[node name="Rhand" type="XRController3D" parent="XROrigin3D" unique_id=649067091]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 1.2, -0.7)
+tracker = &"right_hand"
+show_when_tracked = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="XROrigin3D/Rhand" unique_id=1886868316]
+mesh = SubResource("SphereMesh_eo2jr")
+
+[node name="XRCamera3D" type="XRCamera3D" parent="XROrigin3D" unique_id=1802591828]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6148762, 0)
 current = true
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 mesh = SubResource("CapsuleMesh_eo2jr")
 
-[node name="Rhand" type="XRController3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 1.2, -0.7)
-tracker = &"right_hand"
-show_when_tracked = true
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Rhand"]
-mesh = SubResource("SphereMesh_eo2jr")
-
-[node name="Lhand" type="XRController3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 1.2, -0.7)
-tracker = &"left_hand"
-show_when_tracked = true
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Lhand"]
-mesh = SubResource("SphereMesh_eo2jr")
-
-[node name="Sprite3D" type="Sprite3D" parent="Lhand"]
-transform = Transform3D(0.22, 0, 0, 0, 0.22, 0, 0, 0, 0.22, 0, 0.197204, 0)
-texture = SubResource("ViewportTexture_eo2jr")
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1317933437]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.99999994, 0)
+shape = SubResource("CylinderShape3D_onrkg")
