@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://c5ckupu0pogp8"]
+[gd_scene load_steps=9 format=3 uid="uid://c5ckupu0pogp8"]
 
 [ext_resource type="PackedScene" uid="uid://pul51jhcy81x" path="res://inventaire.tscn" id="2_onrkg"]
 [ext_resource type="Script" uid="uid://e2o00hdn6177" path="res://mesh_alignment.gd" id="3_hqtel"]
@@ -31,18 +31,18 @@ height = 1.9999999
 [node name="Player" type="CharacterBody3D" unique_id=1032940027]
 script = ExtResource("3_i3pqv")
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=918569051]
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_i3pqv")
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=736190250]
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75, -0.433013, 0, 0, 0)
 shadow_enabled = true
 
-[node name="SubViewport" type="SubViewport" parent="." unique_id=1055351388]
+[node name="SubViewport" type="SubViewport" parent="."]
 transparent_bg = true
 size = Vector2i(380, 75)
 
-[node name="Inventaire" parent="SubViewport" unique_id=49829407 instance=ExtResource("2_onrkg")]
+[node name="Inventaire" parent="SubViewport" instance=ExtResource("2_onrkg")]
 
 [node name="XROrigin3D" type="XROrigin3D" parent="." unique_id=1995816677]
 
@@ -70,7 +70,7 @@ mesh = SubResource("SphereMesh_eo2jr")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6148762, 0)
 current = true
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1714249211]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 mesh = SubResource("CapsuleMesh_eo2jr")
 script = ExtResource("3_hqtel")

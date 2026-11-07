@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://in54j5eqfc61"]
+[gd_scene load_steps=6 format=3 uid="uid://in54j5eqfc61"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_lt752"]
 size = Vector3(1, 10, 20)
@@ -6,6 +6,9 @@ size = Vector3(1, 10, 20)
 [sub_resource type="BoxMesh" id="BoxMesh_4c8tf"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_a4812"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4c8tf"]
+albedo_color = Color(0.444094, 0.212694, 0, 1)
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_4c8tf"]
 size = Vector2(30, 20)
@@ -147,6 +150,7 @@ skeleton = NodePath("../../sol")
 transform = Transform3D(-8.30051e-08, 0, 2.22336, 0, 0.281969, 0, -1.89894, 0, -9.71863e-08, 12.5464, 1.18023, 0.0995073)
 mesh = SubResource("BoxMesh_a4812")
 skeleton = NodePath("../sol")
+surface_material_override/0 = SubResource("StandardMaterial3D_4c8tf")
 
 [node name="table_bas" type="MeshInstance3D" parent="table_haut4"]
 transform = Transform3D(0.240724, 0, 8.88178e-16, 0, 9.37794, 0, 0, 0, 0.274844, 0.00440001, -4.22276, -0.0117245)
