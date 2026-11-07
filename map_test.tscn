@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://02blcm2j5ors"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_eo2jr"]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_63peu"]
+data = PackedVector3Array(1, 0, 1, -1, 0, 1, 1, 0, -1, -1, 0, 1, -1, 0, -1, 1, 0, -1)
+
+[node name="MapTest" type="Node3D" unique_id=1990124940]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1495991998]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D" unique_id=850310663]
+mesh = SubResource("PlaneMesh_eo2jr")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=2073964308]
+shape = SubResource("ConcavePolygonShape3D_63peu")
