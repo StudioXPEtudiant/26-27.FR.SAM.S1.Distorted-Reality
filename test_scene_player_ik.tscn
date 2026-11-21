@@ -260,4 +260,4 @@ settings/0/joints/2/rotation_axis = 3
 settings/0/joints/2/limitation = null
 
 [node name="Marker3D" type="Marker3D" parent="human_low_poly/Armature" unique_id=1561100330]
-transform = Transform3D(1, 0, 0, 0, 1.0000001, 3.126388e-13, 0, -3.126388e-13, 1.0000001, 0.013256751, -0.017006638, 0.026646554)
+transform = Transform3D(1, 0, 0, 0, 1.0000001, 3.5527137e-13, 0, -3.5527137e-13, 1.0000001, 0.01563678, -0.022287687, 0.026646577)
