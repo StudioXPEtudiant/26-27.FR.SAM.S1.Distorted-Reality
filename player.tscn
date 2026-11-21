@@ -5,18 +5,6 @@
 [ext_resource type="Script" uid="uid://bjuxbybh5uwmv" path="res://player_controller.gd" id="3_i3pqv"]
 [ext_resource type="Shader" uid="uid://c1qna4uchw74j" path="res://filter.gdshader" id="3_sweqy"]
 
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_4flbx"]
-sky_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
-ground_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
-
-[sub_resource type="Sky" id="Sky_onrkg"]
-sky_material = SubResource("ProceduralSkyMaterial_4flbx")
-
-[sub_resource type="Environment" id="Environment_i3pqv"]
-background_mode = 2
-sky = SubResource("Sky_onrkg")
-glow_enabled = true
-
 [sub_resource type="SphereMesh" id="SphereMesh_eo2jr"]
 radius = 0.1
 height = 0.2
@@ -124,13 +112,6 @@ bind/15/pose = Transform3D(1, 0, 0, 1.3234888e-23, -5.9604645e-08, -1, 0, 1, 0, 
 [node name="Player" type="CharacterBody3D" unique_id=1032940027]
 script = ExtResource("3_i3pqv")
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1861380712]
-environment = SubResource("Environment_i3pqv")
-
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1613310820]
-transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75, -0.433013, 0, 0, 0)
-shadow_enabled = true
-
 [node name="SubViewport" type="SubViewport" parent="." unique_id=385274587]
 transparent_bg = true
 size = Vector2i(380, 75)
@@ -166,6 +147,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6148762, 0)
 current = true
 
 [node name="filter" type="MeshInstance3D" parent="XROrigin3D/XRCamera3D" unique_id=690858557]
+visible = false
 mesh = SubResource("QuadMesh_eo2jr")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1997749533]
@@ -337,22 +319,22 @@ bones/20/scale = Vector3(1, 1, 1)
 mesh = SubResource("ArrayMesh_k0380")
 skin = SubResource("Skin_2se84")
 
-[node name="FABRIK3D" type="FABRIK3D" parent="human_low_poly/Armature/Skeleton3D" unique_id=1288275527]
+[node name="arms" type="FABRIK3D" parent="human_low_poly/Armature/Skeleton3D" unique_id=1288275527]
 angular_delta_limit = 3.141592653589793
 deterministic = true
 setting_count = 2
-settings/0/target_node = NodePath("../../../../XROrigin3D/Lhand")
-settings/1/target_node = NodePath("../../../../XROrigin3D/Rhand")
-settings/0/root_bone_name = "Bone.004"
-settings/0/root_bone = 3
-settings/0/end_bone_name = "Bone.006_end"
-settings/0/end_bone = 5
+settings/0/target_node = NodePath("../../../../XROrigin3D/Rhand")
+settings/1/target_node = NodePath("../../../../XROrigin3D/Lhand")
+settings/0/root_bone_name = "Bone.005"
+settings/0/root_bone = 7
+settings/0/end_bone_name = "Bone.007_end"
+settings/0/end_bone = 9
 settings/0/extend_end_bone = false
 settings/0/joint_count = 3
-settings/1/root_bone_name = "Bone.005"
-settings/1/root_bone = 7
-settings/1/end_bone_name = "Bone.007_end"
-settings/1/end_bone = 9
+settings/1/root_bone_name = "Bone.004"
+settings/1/root_bone = 3
+settings/1/end_bone_name = "Bone.006_end"
+settings/1/end_bone = 5
 settings/1/extend_end_bone = false
 settings/1/joint_count = 3
 settings/0/joints/0/rotation_axis = 3
