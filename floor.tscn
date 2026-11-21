@@ -1,7 +1,5 @@
 [gd_scene format=3 uid="uid://in54j5eqfc61"]
 
-[ext_resource type="PackedScene" uid="uid://c5ckupu0pogp8" path="res://player.tscn" id="1_oj3tl"]
-
 [sub_resource type="BoxMesh" id="BoxMesh_lt752"]
 size = Vector3(1, 10, 20)
 
@@ -213,5 +211,3 @@ surface_material_override/0 = SubResource("StandardMaterial3D_a4812")
 transform = Transform3D(0.628006, 0, 0, 0, 1, 0, 0, 0, 1, 23.9956, 0, 0)
 mesh = SubResource("PlaneMesh_4c8tf")
 surface_material_override/0 = SubResource("StandardMaterial3D_yg8rv")
-
-[node name="Player" parent="." unique_id=1032940027 instance=ExtResource("1_oj3tl")]
