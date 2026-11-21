@@ -66,3 +66,7 @@ transform = Transform3D(3.821371e-15, -8.742278e-08, -2, -2, -8.742278e-08, 0, -
 shape = SubResource("ConcavePolygonShape3D_l4gis")
 
 [node name="Monstre1" parent="." unique_id=1341671538 instance=ExtResource("1_2x4j1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=2084692394]
+transform = Transform3D(0.7303799, -0.25000006, 0.63564557, 0.0062360223, 0.9330128, 0.3597894, -0.6830128, -0.25881904, 0.68301266, 9, 7, 8)
