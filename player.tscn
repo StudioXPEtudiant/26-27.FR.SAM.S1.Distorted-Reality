@@ -23,10 +23,7 @@ material = SubResource("ShaderMaterial_oj71b")
 flip_faces = true
 size = Vector2(2, 2)
 
-[sub_resource type="CapsuleMesh" id="CapsuleMesh_eo2jr"]
-
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_onrkg"]
-height = 1.9999999
 radius = 0.335
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4nw2w"]
@@ -110,7 +107,6 @@ bind/15/bone = -1
 bind/15/pose = Transform3D(1, 0, 0, 1.3234888e-23, -5.9604645e-08, -1, 0, 1, 0, 1.1024532e-18, -0.03790929, -0.00408883)
 
 [node name="Player" type="CharacterBody3D" unique_id=1032940027]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
 script = ExtResource("3_i3pqv")
 
 [node name="SubViewport" type="SubViewport" parent="." unique_id=385274587]
@@ -149,12 +145,6 @@ current = true
 
 [node name="filter" type="MeshInstance3D" parent="XROrigin3D/XRCamera3D" unique_id=690858557]
 mesh = SubResource("QuadMesh_eo2jr")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1997749533]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
-visible = false
-mesh = SubResource("CapsuleMesh_eo2jr")
-script = ExtResource("3_hqtel")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1317933437]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.99999994, 0)

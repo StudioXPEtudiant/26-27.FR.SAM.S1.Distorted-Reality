@@ -6,7 +6,10 @@ extends CharacterBody3D
 @export var speed: float = 3.0
 
 func _ready() -> void:
-	pass
+	
+	var test = Vector3.ONE * ($XROrigin3D/XRCamera3D.global_position.y / 5.0)
+	$".".scale = test
+	print(test)
 
 
 func _physics_process(delta):

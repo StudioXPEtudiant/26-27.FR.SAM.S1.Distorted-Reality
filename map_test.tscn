@@ -3,6 +3,18 @@
 [ext_resource type="Script" uid="uid://b0abmesq8c8ip" path="res://vrInitilize.gd" id="1_104vu"]
 [ext_resource type="PackedScene" uid="uid://c5ckupu0pogp8" path="res://player.tscn" id="1_q1m20"]
 
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_104vu"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_c7aqf"]
+sky_material = SubResource("ProceduralSkyMaterial_104vu")
+
+[sub_resource type="Environment" id="Environment_eab4r"]
+background_mode = 2
+sky = SubResource("Sky_c7aqf")
+glow_enabled = true
+
 [sub_resource type="PlaneMesh" id="PlaneMesh_eo2jr"]
 size = Vector2(5, 5)
 
@@ -11,6 +23,13 @@ data = PackedVector3Array(2.5, 0, 2.5, -2.5, 0, 2.5, 2.5, 0, -2.5, -2.5, 0, 2.5,
 
 [node name="MapTest" type="Node3D" unique_id=1990124940]
 script = ExtResource("1_104vu")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=805423964]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=233960503]
+environment = SubResource("Environment_eab4r")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1495991998]
 

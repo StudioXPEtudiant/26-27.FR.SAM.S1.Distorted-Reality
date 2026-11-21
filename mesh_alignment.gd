@@ -1,4 +1,4 @@
-extends MeshInstance3D
+extends Node3D
 
 @onready var cam =  $"../XROrigin3D/XRCamera3D"
 
