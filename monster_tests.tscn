@@ -1,0 +1,68 @@
+[gd_scene format=3 uid="uid://cgwoj1nrc0jix"]
+
+[ext_resource type="PackedScene" uid="uid://dm4hiuj66dusc" path="res://monstres/monstre_1.tscn" id="1_2x4j1"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_eo2jr"]
+size = Vector2(10, 10)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_lncqf"]
+data = PackedVector3Array(5, 0, 5, -5, 0, 5, 5, 0, -5, -5, 0, 5, -5, 0, -5, 5, 0, -5)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_oj71b"]
+size = Vector2(5, 5)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_86cko"]
+data = PackedVector3Array(2.5, 0, 2.5, -2.5, 0, 2.5, 2.5, 0, -2.5, -2.5, 0, 2.5, -2.5, 0, -2.5, 2.5, 0, -2.5)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_qr86h"]
+data = PackedVector3Array(2.5, 0, 2.5, -2.5, 0, 2.5, 2.5, 0, -2.5, -2.5, 0, 2.5, -2.5, 0, -2.5, 2.5, 0, -2.5)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_kpwn2"]
+data = PackedVector3Array(2.5, 0, 2.5, -2.5, 0, 2.5, 2.5, 0, -2.5, -2.5, 0, 2.5, -2.5, 0, -2.5, 2.5, 0, -2.5)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_l4gis"]
+data = PackedVector3Array(2.5, 0, 2.5, -2.5, 0, 2.5, 2.5, 0, -2.5, -2.5, 0, 2.5, -2.5, 0, -2.5, 2.5, 0, -2.5)
+
+[node name="MonsterTests" type="Node3D" unique_id=1673969120]
+
+[node name="box" type="StaticBody3D" parent="." unique_id=1910687098]
+
+[node name="floor" type="MeshInstance3D" parent="box" unique_id=702449288]
+mesh = SubResource("PlaneMesh_eo2jr")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="box" unique_id=266533780]
+shape = SubResource("ConcavePolygonShape3D_lncqf")
+
+[node name="wall1" type="MeshInstance3D" parent="box" unique_id=373617160]
+transform = Transform3D(-8.742278e-08, 2, 0, -2, -8.742278e-08, 0, 0, 0, 2, -5, 5, 0)
+mesh = SubResource("PlaneMesh_oj71b")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="box" unique_id=516289688]
+transform = Transform3D(-8.742278e-08, 2, 0, -2, -8.742278e-08, 0, 0, 0, 2, -5, 5, 0)
+shape = SubResource("ConcavePolygonShape3D_86cko")
+
+[node name="wall2" type="MeshInstance3D" parent="box" unique_id=149347269]
+transform = Transform3D(8.742278e-08, -2, 1.7484555e-07, -2, -8.742278e-08, 0, 7.642742e-15, -1.7484555e-07, -2, 5, 5, 0)
+mesh = SubResource("PlaneMesh_oj71b")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="box" unique_id=735288018]
+transform = Transform3D(8.742278e-08, -2, 1.7484555e-07, -2, -8.742278e-08, 0, 7.642742e-15, -1.7484555e-07, -2, 5, 5, 0)
+shape = SubResource("ConcavePolygonShape3D_qr86h")
+
+[node name="wall3" type="MeshInstance3D" parent="box" unique_id=46751574]
+transform = Transform3D(3.821371e-15, -8.742278e-08, 2, -2, -8.742278e-08, 0, 8.742278e-08, -2, -8.742278e-08, 2.1855695e-07, 5, 5)
+mesh = SubResource("PlaneMesh_oj71b")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="box" unique_id=982565670]
+transform = Transform3D(3.821371e-15, -8.742278e-08, 2, -2, -8.742278e-08, 0, 8.742278e-08, -2, -8.742278e-08, 2.1855695e-07, 5, 5)
+shape = SubResource("ConcavePolygonShape3D_kpwn2")
+
+[node name="wall4" type="MeshInstance3D" parent="box" unique_id=1604806463]
+transform = Transform3D(3.821371e-15, -8.742278e-08, -2, -2, -8.742278e-08, 0, -8.742278e-08, 2, -8.742278e-08, -2.1855695e-07, 5, -5)
+mesh = SubResource("PlaneMesh_oj71b")
+
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="box" unique_id=1766015082]
+transform = Transform3D(3.821371e-15, -8.742278e-08, -2, -2, -8.742278e-08, 0, -8.742278e-08, 2, -8.742278e-08, -2.1855695e-07, 5, -5)
+shape = SubResource("ConcavePolygonShape3D_l4gis")
+
+[node name="Monstre1" parent="." unique_id=1341671538 instance=ExtResource("1_2x4j1")]
