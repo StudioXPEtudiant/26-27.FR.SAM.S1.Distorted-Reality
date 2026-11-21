@@ -162,6 +162,7 @@ shape = SubResource("CylinderShape3D_onrkg")
 
 [node name="human_low_poly" type="Node3D" parent="." unique_id=1346728556]
 transform = Transform3D(-9.1793915e-09, 0, -0.21, 0, 0.21, 0, 0.21, 0, -9.1793915e-09, 0, 1.1851957, 0)
+script = ExtResource("3_hqtel")
 
 [node name="Armature" type="Node3D" parent="human_low_poly" unique_id=2117055091]
 transform = Transform3D(100, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 0, -1.0747781, 0)
