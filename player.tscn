@@ -145,6 +145,7 @@ tracker = &"left_hand"
 show_when_tracked = true
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="XROrigin3D/Lhand" unique_id=853220416]
+visible = false
 mesh = SubResource("SphereMesh_eo2jr")
 
 [node name="Sprite3D" type="Sprite3D" parent="XROrigin3D/Lhand" unique_id=878381658]
@@ -157,6 +158,7 @@ tracker = &"right_hand"
 show_when_tracked = true
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="XROrigin3D/Rhand" unique_id=1886868316]
+visible = false
 mesh = SubResource("SphereMesh_eo2jr")
 
 [node name="XRCamera3D" type="XRCamera3D" parent="XROrigin3D" unique_id=1802591828]
@@ -164,7 +166,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6148762, 0)
 current = true
 
 [node name="filter" type="MeshInstance3D" parent="XROrigin3D/XRCamera3D" unique_id=690858557]
-visible = false
 mesh = SubResource("QuadMesh_eo2jr")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1997749533]
