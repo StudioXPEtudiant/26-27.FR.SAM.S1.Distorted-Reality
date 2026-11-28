@@ -1,8 +1,8 @@
 [gd_scene format=4 uid="uid://c5ckupu0pogp8"]
 
-[ext_resource type="PackedScene" uid="uid://pul51jhcy81x" path="res://inventaire.tscn" id="2_onrkg"]
-[ext_resource type="Script" uid="uid://bjuxbybh5uwmv" path="res://player_controller.gd" id="3_i3pqv"]
-[ext_resource type="Shader" uid="uid://c1qna4uchw74j" path="res://filter.gdshader" id="3_sweqy"]
+[ext_resource type="Script" uid="uid://bjuxbybh5uwmv" path="res://scripts/player_controller.gd" id="1_qhqgy"]
+[ext_resource type="PackedScene" uid="uid://pul51jhcy81x" path="res://scenes/inventaire.tscn" id="2_dqkch"]
+[ext_resource type="Shader" uid="uid://c1qna4uchw74j" path="res://filter.gdshader" id="3_qlg0r"]
 
 [sub_resource type="SphereMesh" id="SphereMesh_eo2jr"]
 radius = 0.1
@@ -13,7 +13,7 @@ viewport_path = NodePath("SubViewport")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_oj71b"]
 render_priority = 0
-shader = ExtResource("3_sweqy")
+shader = ExtResource("3_qlg0r")
 shader_parameter/pixel_size = 1.0
 shader_parameter/levels = 70.0
 
@@ -99,13 +99,13 @@ bind/15/bone = -1
 bind/15/pose = Transform3D(0.05825533, -0.021817185, 0.38585174, 0.38580582, -0.019565137, -0.059354663, 0.02263004, 0.3897341, 0.018619968, 0.008802817, -0.00056598586, -0.0011971307)
 
 [node name="Player" type="CharacterBody3D" unique_id=1032940027]
-script = ExtResource("3_i3pqv")
+script = ExtResource("1_qhqgy")
 
 [node name="SubViewport" type="SubViewport" parent="." unique_id=385274587]
 transparent_bg = true
 size = Vector2i(380, 75)
 
-[node name="Inventaire" parent="SubViewport" unique_id=819485775 instance=ExtResource("2_onrkg")]
+[node name="Inventaire" parent="SubViewport" unique_id=819485775 instance=ExtResource("2_dqkch")]
 
 [node name="XROrigin3D" type="XROrigin3D" parent="." unique_id=1995816677]
 

@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://02blcm2j5ors"]
 
-[ext_resource type="Script" uid="uid://b0abmesq8c8ip" path="res://vrInitilize.gd" id="1_104vu"]
-[ext_resource type="PackedScene" uid="uid://c5ckupu0pogp8" path="res://player.tscn" id="1_q1m20"]
+[ext_resource type="Script" uid="uid://b0abmesq8c8ip" path="res://scripts/vrInitilize.gd" id="1_104vu"]
+[ext_resource type="PackedScene" uid="uid://c5ckupu0pogp8" path="res://scenes/player.tscn" id="1_q1m20"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_104vu"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)

@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://cox1hrfqnd7og"
-path="res://.godot/imported/Sans titre.fbx-3017835c46aae2a4c2355e60c7921bf5.scn"
+path="res://.godot/imported/Sans titre.fbx-83a058779fa8f4ed26c1726257a9de92.scn"
 
 [deps]
 
-source_file="res://Sans titre.fbx"
-dest_files=["res://.godot/imported/Sans titre.fbx-3017835c46aae2a4c2355e60c7921bf5.scn"]
+source_file="res://assets/models/Sans titre.fbx"
+dest_files=["res://.godot/imported/Sans titre.fbx-83a058779fa8f4ed26c1726257a9de92.scn"]
 
 [params]
 

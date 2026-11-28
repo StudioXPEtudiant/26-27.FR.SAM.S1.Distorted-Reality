@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://1aihj70ewkaj"
-path="res://.godot/imported/human_low_poly.fbx-168124fb8d698a13598b73c46fc75dbb.scn"
+uid="uid://d3ia8yrqva8sy"
+path="res://.godot/imported/monster1.fbx-ae09f12b64a43f1445e637f816d946c1.scn"
 
 [deps]
 
-source_file="res://human_low_poly.fbx"
-dest_files=["res://.godot/imported/human_low_poly.fbx-168124fb8d698a13598b73c46fc75dbb.scn"]
+source_file="res://assets/models/monster1.fbx"
+dest_files=["res://.godot/imported/monster1.fbx-ae09f12b64a43f1445e637f816d946c1.scn"]
 
 [params]
 

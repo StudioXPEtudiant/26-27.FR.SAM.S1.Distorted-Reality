@@ -1,6 +1,6 @@
 [gd_scene format=4 uid="uid://dm4hiuj66dusc"]
 
-[ext_resource type="Script" uid="uid://coxvkl3aov40k" path="res://monstres/monster1controller.gd" id="1_pgo2t"]
+[ext_resource type="Script" uid="uid://coxvkl3aov40k" path="res://monstres/monster1/monster1controller.gd" id="1_pgo2t"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bmo8i"]
 
